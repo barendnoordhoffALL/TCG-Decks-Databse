@@ -1,4 +1,10 @@
+delete from color where true;
+delete from onepiecedeck where true;
 delete from set where true;
+delete from status where true;
+delete from typing where true;
+delete from onepiecedeckcolors where true;
+delete from onepiecedeck_typings where true;
 
 insert into set(setname) values ('OP05'),
                                 ('OP06'),
@@ -18,7 +24,6 @@ insert into set(setname) values ('OP05'),
                                 ('ST26'),
                                 ('ST27');
 
-delete from color where true;
 
 insert into color(color) values ('Yellow'),
                                 ('Black'),
@@ -27,11 +32,113 @@ insert into color(color) values ('Yellow'),
                                 ('Green'),
                                 ('Purple');
 
-delete from status where true;
-
 insert into status (status) values ('Build'),
                                    ('Building'),
                                    ('Considering'),
                                    ('Interested'),
                                    ('Not in this meta'),
                                    ('Taken apart');
+
+insert into typing (typing) values
+                                ('Straw hat crew'),
+                                ('The Vinsmoke family'),
+                                ('GERMA 66'),
+                                ('The seven warlords'),
+                                ('Thriller bark pirates'),
+                                ('CP0'),
+                                ('Sky Island'),
+                                ('Shandian warrior'),
+                                ('Jaya'),
+                                ('Odyssey'),
+                                ('The four emperors'),
+                                ('Cross guild'),
+                                ('Blackbeard pirates'),
+                                ('Dressrossa'),
+                                ('Supernovas'),
+                                ('Heart pirates'),
+                                ('Navy'),
+                                ('Revolutionary army'),
+                                ('FILM'),
+                                ('Whitebeard Pirates');
+
+insert into onepiecedeck (leader, status, set, power, life, mained) values
+                                ('Luffy', 'Not in this meta', 'OP05', 5000, 5, false),
+                                ('Reiju', 'Build', 'OP06', 5000, 4, false),
+                                ('Gecko Moria', 'Building', 'OP06', 5000, 5, false),
+                                ('Lucci', 'Interested', 'OP07', 5000, 5, false),
+                                ('Kalgara', 'Taken apart', 'OP08', 5000, 5, false),
+                                ('Lim', 'Taken apart', 'OP09', 5000, 4, false),
+                                ('Buggy', 'Build', 'OP09', 5000, 5, false),
+                                ('Luffy', 'Build', 'OP09', 5000, 4, false),
+                                ('Blackbeard', 'Build', 'OP09', 5000, 5, false),
+                                ('Law', 'Building', 'OP10', 5000, 4, false),
+                                ('Luffy', 'Build', 'OP11', 6000, 3, true),
+                                ('Kuzan', 'Build', 'OP12', 5000, 5, false),
+                                ('Zoro', 'Interested', 'OP12', 5000, 5, false),
+                                ('Sabo', 'Building', 'OP13', 5000, 5, false),
+                                ('Luffy', 'Taken apart', 'ST08', 5000, 5, false),
+                                ('Zoro & Sanji', 'Interested', 'ST12', 5000, 4, false),
+                                ('Uta', 'Build', 'ST16', 5000, 5, true),
+                                ('Smoker', 'Taken apart', 'ST18', 5000, 5, false),
+                                ('Ace & Whitebeard', 'Build', 'ST22', 5000, 5, false);
+
+insert into onepiecedeck_typings (typing, setname, leader) VALUES
+                                ('Straw hat crew', 'OP05', 'Luffy'),
+                                ('The Vinsmoke family', 'OP06', 'Reiju'),
+                                ('GERMA 66', 'OP06', 'Reiju'),
+                                ('The seven warlords', 'OP06', 'Gecko Moria'),
+                                ('Thriller bark pirates', 'OP06', 'Gecko Moria'),
+                                ('CP0', 'OP07', 'Lucci'),
+                                ('Sky Island', 'OP08', 'Kalgara'),
+                                ('Shandian warrior', 'OP08', 'Kalgara'),
+                                ('Jaya', 'OP08', 'Kalgara'),
+                                ('Odyssey', 'OP09', 'Lim'),
+                                ('The four emperors', 'OP09', 'Buggy'),
+                                ('Cross guild', 'OP09', 'Buggy'),
+                                ('The four emperors', 'OP09', 'Luffy'),
+                                ('Straw hat crew', 'OP09', 'Luffy'),
+                                ('The four emperors', 'OP09', 'Blackbeard'),
+                                ('Blackbeard pirates', 'OP09', 'Blackbeard'),
+                                ('Dressrossa', 'OP10', 'Law'),
+                                ('Supernovas', 'OP10', 'Law'),
+                                ('Heart pirates', 'OP10', 'Law'),
+                                ('Straw hat crew', 'OP11', 'Luffy'),
+                                ('Navy', 'OP12', 'Kuzan'),
+                                ('Supernovas', 'OP12', 'Zoro'),
+                                ('Straw hat crew', 'OP12', 'Zoro'),
+                                ('Dressrossa', 'OP13', 'Sabo'),
+                                ('Revolutionary army', 'OP13', 'Sabo'),
+                                ('Straw hat crew', 'ST08', 'Luffy'),
+                                ('Straw hat crew', 'ST12', 'Zoro & Sanji'),
+                                ('FILM', 'ST16', 'Uta'),
+                                ('Navy', 'ST18', 'Smoker'),
+                                ('The four emperors', 'ST22', 'Ace & Whitebeard'),
+                                ('Whitebeard Pirates', 'ST22', 'Ace & Whitebeard');
+
+insert into onepiecedeckcolors (color, setname, leader) VALUES
+                                ('Purple', 'OP05', 'Luffy'),
+                                ('Purple', 'OP06', 'Reiju'),
+                                ('Blue', 'OP06', 'Reiju'),
+                                ('Black', 'OP06', 'Gecko Moria'),
+                                ('Black', 'OP07', 'Lucci'),
+                                ('Yellow', 'OP08', 'Kalgara'),
+                                ('Green', 'OP09', 'Lim'),
+                                ('Purple', 'OP09', 'Lim'),
+                                ('Blue', 'OP09', 'Buggy'),
+                                ('Black', 'OP09', 'Luffy'),
+                                ('Purple', 'OP09', 'Luffy'),
+                                ('Black', 'OP09', 'Blackbeard'),
+                                ('Green', 'OP10', 'Law'),
+                                ('Yellow', 'OP10', 'Law'),
+                                ('Blue', 'OP11', 'Luffy'),
+                                ('Purple', 'OP11', 'Luffy'),
+                                ('Blue', 'OP12', 'Kuzan'),
+                                ('Green', 'OP12', 'Zoro'),
+                                ('Red', 'OP13', 'Sabo'),
+                                ('Black', 'OP13', 'Sabo'),
+                                ('Black', 'ST08', 'Luffy'),
+                                ('Blue', 'ST12', 'Zoro & Sanji'),
+                                ('Green', 'ST12', 'Zoro & Sanji'),
+                                ('Green', 'ST16', 'Uta'),
+                                ('Black', 'ST18', 'Smoker'),
+                                ('Blue', 'ST22', 'Ace & Whitebeard');
