@@ -1,4 +1,14 @@
-CREATE OR REPLACE VIEW vw_ListOfDecksWithColorsAndStatus AS (
+/*===========================*/
+/*        TRIGGERS           */
+/*===========================*/
+
+
+
+/*===========================*/
+/*          VIEWS            */
+/*===========================*/
+
+create or replace view vw_ListOfDecksWithColorsAndStatus as (
                         select OPD.leader, OPD.set, C.color, S.status from onepiecedeck OPD
                             inner join onepiecedeckcolors OPC
                                 on OPD.leader = OPC.leader

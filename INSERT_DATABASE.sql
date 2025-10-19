@@ -61,26 +61,26 @@ insert into typing (typing) values
                                 ('FILM'),
                                 ('Whitebeard Pirates');
 
-insert into onepiecedeck (leader, status, set, power, life) values
-                                ('Luffy', 'Not in this meta', 'OP05', 5000, 5),
-                                ('Reiju', 'Build', 'OP06', 5000, 4),
-                                ('Gecko Moria', 'Building', 'OP06', 5000, 5),
-                                ('Lucci', 'Interested', 'OP07', 5000, 5),
-                                ('Kalgara', 'Taken apart', 'OP08', 5000, 5),
-                                ('Lim', 'Taken apart', 'OP09', 5000, 4),
-                                ('Buggy', 'Build', 'OP09', 5000, 5),
-                                ('Luffy', 'Build', 'OP09', 5000, 4),
-                                ('Blackbeard', 'Build', 'OP09', 5000, 5),
-                                ('Law', 'Building', 'OP10', 5000, 4),
-                                ('Luffy', 'Build', 'OP11', 6000, 3),
-                                ('Kuzan', 'Build', 'OP12', 5000, 5),
-                                ('Zoro', 'Interested', 'OP12', 5000, 5),
-                                ('Sabo', 'Building', 'OP13', 5000, 5),
-                                ('Luffy', 'Taken apart', 'ST08', 5000, 5),
-                                ('Zoro & Sanji', 'Interested', 'ST12', 5000, 4),
-                                ('Uta', 'Build', 'ST16', 5000, 5),
-                                ('Smoker', 'Taken apart', 'ST18', 5000, 5),
-                                ('Ace & Whitebeard', 'Build', 'ST22', 5000, 5);
+insert into onepiecedeck (leader, status, set, power, life, mained) values
+                                ('Luffy', 'Not in this meta', 'OP05', 5000, 5, false),
+                                ('Reiju', 'Build', 'OP06', 5000, 4, false),
+                                ('Gecko Moria', 'Building', 'OP06', 5000, 5, false),
+                                ('Lucci', 'Interested', 'OP07', 5000, 5, false),
+                                ('Kalgara', 'Taken apart', 'OP08', 5000, 5, false),
+                                ('Lim', 'Taken apart', 'OP09', 5000, 4, false),
+                                ('Buggy', 'Build', 'OP09', 5000, 5, false),
+                                ('Luffy', 'Build', 'OP09', 5000, 4, false),
+                                ('Blackbeard', 'Build', 'OP09', 5000, 5, false),
+                                ('Law', 'Building', 'OP10', 5000, 4, false),
+                                ('Luffy', 'Build', 'OP11', 6000, 3, true),
+                                ('Kuzan', 'Build', 'OP12', 5000, 5, false),
+                                ('Zoro', 'Interested', 'OP12', 5000, 5, false),
+                                ('Sabo', 'Building', 'OP13', 5000, 5, false),
+                                ('Luffy', 'Taken apart', 'ST08', 5000, 5, false),
+                                ('Zoro & Sanji', 'Interested', 'ST12', 5000, 4, false),
+                                ('Uta', 'Build', 'ST16', 5000, 5, true),
+                                ('Smoker', 'Taken apart', 'ST18', 5000, 5, false),
+                                ('Ace & Whitebeard', 'Build', 'ST22', 5000, 5, false);
 
 insert into onepiecedeck_typings (typing, setname, leader) VALUES
                                 ('Straw hat crew', 'OP05', 'Luffy'),

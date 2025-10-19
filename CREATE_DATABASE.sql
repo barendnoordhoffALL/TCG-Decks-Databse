@@ -6,7 +6,7 @@
 drop index if exists COLOR_PK;
 
 alter table if exists COLOR
-   drop constraint if exists PK_COLOR;
+   drop constraint if exists PK_COLOR cascade ;
 
 drop table if exists COLOR;
 
@@ -17,7 +17,7 @@ drop index if exists FK_ONEPIECEDECK_SET_FK;
 drop index if exists ONEPIECEDECK_PK;
 
 alter table if exists ONEPIECEDECK
-   drop constraint if exists PK_ONEPIECEDECK;
+   drop constraint if exists PK_ONEPIECEDECK cascade ;
 
 drop table if exists ONEPIECEDECK;
 
@@ -89,7 +89,8 @@ create table ONEPIECEDECK (
    STATUS               VARCHAR(25)          not null,
    SET                  VARCHAR(10)          not null,
    POWER                INT4                 null,
-   LIFE                 INT4                 null
+   LIFE                 INT4                 null,
+   MAINED               boolean              not null
 );
 
 alter table ONEPIECEDECK
@@ -100,13 +101,6 @@ alter table ONEPIECEDECK
 /*==============================================================*/
 create unique index ONEPIECEDECK_PK on ONEPIECEDECK (
 LEADER,
-SET
-);
-
-/*==============================================================*/
-/* Index: FK_ONEPIECEDECK_SET_FK                                */
-/*==============================================================*/
-create unique index FK_ONEPIECEDECK_SET_FK on ONEPIECEDECK (
 SET
 );
 
@@ -253,20 +247,20 @@ alter table ONEPIECEDECK
 alter table ONEPIECEDECKCOLORS
    add constraint FK_ONEPIECE_FK_COLOR__COLOR foreign key (COLOR)
       references COLOR (COLOR)
-      on delete restrict on update restrict;
+      on delete cascade on update cascade;
 
 alter table ONEPIECEDECKCOLORS
    add constraint FK_ONEPIECE_FK_ONEPIE_ONEPIECE foreign key (LEADER, SETNAME)
       references ONEPIECEDECK (LEADER, SET)
-      on delete restrict on update restrict;
+      on delete cascade on update cascade;
 
 alter table ONEPIECEDECK_TYPINGS
    add constraint FK_ONEPIECE_FK_ONEPIE_ONEPIECE foreign key (LEADER, SETNAME)
       references ONEPIECEDECK (LEADER, SET)
-      on delete restrict on update restrict;
+      on delete cascade on update cascade;
 
 alter table ONEPIECEDECK_TYPINGS
    add constraint FK_ONEPIECE_FK_TYPING_TYPING foreign key (TYPING)
       references TYPING (TYPING)
-      on delete restrict on update restrict;
+      on delete cascade on update cascade;
 
