@@ -19,4 +19,4 @@ insert into onepiecedeck (leader, status, set, power, life) values
                                 ('Law', 'Building', 'OP10', 5000, 4),
                                 ('Luffy', 'Build', 'OP11', 6000, 3),
                                 ('Kuzan', 'Build', 'OP12', 5000, 5),
-                                
+                                ('Zoro', 'Build', 'OP12', 5000, 5)
