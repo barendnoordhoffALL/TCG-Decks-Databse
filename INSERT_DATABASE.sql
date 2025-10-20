@@ -6,24 +6,23 @@ delete from typing where true;
 delete from onepiecedeckcolors where true;
 delete from onepiecedeck_typings where true;
 
-insert into set(setname) values ('OP05'),
-                                ('OP06'),
-                                ('OP07'),
-                                ('OP08'),
-                                ('OP09'),
-                                ('OP10'),
-                                ('OP11'),
-                                ('OP12'),
-                                ('OP13'),
-                                ('ST08'),
-                                ('ST12'),
-                                ('ST16'),
-                                ('ST18'),
-                                ('ST22'),
-                                ('ST25'),
-                                ('ST26'),
-                                ('ST27');
-
+insert into set(setname, current_set) values ('OP05', false),
+                                ('OP06', false),
+                                ('OP07', false),
+                                ('OP08', false),
+                                ('OP09', false),
+                                ('OP10', false),
+                                ('OP11', false),
+                                ('OP12', true),
+                                ('OP13', false),
+                                ('ST08', false),
+                                ('ST12', false),
+                                ('ST16', false),
+                                ('ST18', false),
+                                ('ST22', false),
+                                ('ST25', false),
+                                ('ST26', false),
+                                ('ST27', false);
 
 insert into color(color) values ('Yellow'),
                                 ('Black'),
@@ -59,7 +58,8 @@ insert into typing (typing) values
                                 ('Navy'),
                                 ('Revolutionary army'),
                                 ('FILM'),
-                                ('Whitebeard Pirates');
+                                ('Whitebeard Pirates'),
+                                ('Big Mom Pirates');
 
 insert into onepiecedeck (leader, status, set, power, life, mained) values
                                 ('Luffy', 'Not in this meta', 'OP05', 5000, 5, false),
@@ -67,6 +67,7 @@ insert into onepiecedeck (leader, status, set, power, life, mained) values
                                 ('Gecko Moria', 'Building', 'OP06', 5000, 5, false),
                                 ('Lucci', 'Interested', 'OP07', 5000, 5, false),
                                 ('Kalgara', 'Taken apart', 'OP08', 5000, 5, false),
+                                ('Pudding', 'Interested', 'OP08', 5000, 4, false),
                                 ('Lim', 'Taken apart', 'OP09', 5000, 4, false),
                                 ('Buggy', 'Build', 'OP09', 5000, 5, false),
                                 ('Luffy', 'Build', 'OP09', 5000, 4, false),
@@ -92,6 +93,7 @@ insert into onepiecedeck_typings (typing, setname, leader) VALUES
                                 ('Sky Island', 'OP08', 'Kalgara'),
                                 ('Shandian warrior', 'OP08', 'Kalgara'),
                                 ('Jaya', 'OP08', 'Kalgara'),
+                                ('Big Mom Pirates', 'OP08', 'Pudding'),
                                 ('Odyssey', 'OP09', 'Lim'),
                                 ('The four emperors', 'OP09', 'Buggy'),
                                 ('Cross guild', 'OP09', 'Buggy'),
@@ -122,6 +124,8 @@ insert into onepiecedeckcolors (color, setname, leader) VALUES
                                 ('Black', 'OP06', 'Gecko Moria'),
                                 ('Black', 'OP07', 'Lucci'),
                                 ('Yellow', 'OP08', 'Kalgara'),
+                                ('Yellow', 'OP08', 'Pudding'),
+                                ('Purple', 'OP08', 'Pudding'),
                                 ('Green', 'OP09', 'Lim'),
                                 ('Purple', 'OP09', 'Lim'),
                                 ('Blue', 'OP09', 'Buggy'),

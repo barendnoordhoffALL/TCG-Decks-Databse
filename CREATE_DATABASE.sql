@@ -187,7 +187,8 @@ SETNAME
 /* Table: SET                                                   */
 /*==============================================================*/
 create table SET (
-   SETNAME              VARCHAR(10)          not null
+   SETNAME              VARCHAR(10)          not null,
+   CURRENT_SET          boolean              not null
 );
 
 alter table SET
